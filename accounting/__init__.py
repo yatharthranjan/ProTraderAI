@@ -1,13 +1,5 @@
-from enum import Enum
-
-
-class Event(Enum):
-    BUY = "BUY",
-    SELL = "SELL"
-
-
 class AccountantData:
-    def __init__(self, iteration_id, ticker, time, decision_node, event: [Event, None] = None):
+    def __init__(self, iteration_id, ticker, time, decision_node, event: [str, None] = None):
         self.iteration_id = iteration_id
         self.ticker = ticker
         self.time = time
