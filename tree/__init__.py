@@ -11,10 +11,14 @@ class Tree:
             if self.current_node.left is not None:
                 self.current_node = self.current_node.left
                 return self.current_node
+            else:
+                self.current_node = self.root_node
         else:
             if self.current_node.right is not None:
                 self.current_node = self.current_node.right
                 return self.current_node
+            else:
+                self.current_node = self.root_node
 
             # Only execute actions if the node is a leaf
             if self.current_node.left is None and self.current_node.right is None:

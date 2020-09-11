@@ -10,7 +10,7 @@ class AccountantData:
 class Accountant:
 
     def __init__(self):
-        self.data = AccountantData
+        self.data = self.load()
         pass
 
     def log(self, accountant_data: AccountantData):
