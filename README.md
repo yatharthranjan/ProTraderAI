@@ -1,3 +1,6 @@
+# Development moved to fork https://github.com/Ostudiolabs/ProTraderAI
+-
+
 ## Trading Bot
 
 A simple trading bot based on Binary Decision Trees making it highly customisable - 
