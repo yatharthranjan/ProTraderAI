@@ -1,17 +1,16 @@
 from tree import Tree
 from common.data_retriever import DataRetriever
-from accounting import Accountant, AccountantData
+from accounting import Accountant, AccountantData, SQLiteDatabase
 import uuid
 import time
 
 
 class Farm:
 
-    def __init__(self, ticker_trees: dict, data_retriever: DataRetriever, timeframe: str = '5m'):
+    def __init__(self, ticker_trees: dict, data_retriever: DataRetriever, timeframe: str = '5m', accountant: Accountant = Accountant(database=SQLiteDatabase('trades.db')), **kwargs):
         self.ticker_trees = ticker_trees
         self.data_retriever = data_retriever
         self.timeframe = timeframe
-        self.accountant = Accountant()
 
     # Iterates over all ticker values sequentially. Make sure to run this in a non blocking thread.
     def iterate(self):

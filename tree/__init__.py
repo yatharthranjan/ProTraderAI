@@ -1,12 +1,13 @@
+from typing import Union
 from node import Node
 
 
 class Tree:
-    def __init__(self, root_node: Node):
+    def __init__(self, root_node: Node, **kwargs):
         self.root_node = root_node
         self.current_node = root_node
 
-    def traverse(self, current_data) -> [Node, None]:
+    def traverse(self, current_data) -> Union[Node, None]:
         if self.current_node.condition.check(current_data):
             if self.current_node.left is not None:
                 self.current_node = self.current_node.left
