@@ -1,5 +1,4 @@
 # Development moved to fork https://github.com/Ostudiolabs/ProTraderAI
--
 
 ## Trading Bot
 
